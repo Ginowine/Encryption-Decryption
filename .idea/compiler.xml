@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="Encryption-Decryption-task_main" target="11" />
       <module name="Encryption-Decryption-task_test" target="11" />
+      <module name="Problems-Compression_algorithm_main" target="11" />
+      <module name="Problems-Compression_algorithm_test" target="11" />
       <module name="Problems-Double_characters_main" target="11" />
       <module name="Problems-Double_characters_test" target="11" />
       <module name="Problems-Palindrome_main" target="11" />
