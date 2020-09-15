@@ -1,17 +1,37 @@
 package encryptdecrypt;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        String str1 = "aaabbcccdaa";
-        String str2 = " ";
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        int key = scanner.nextInt();
 
-        for (int i = 0; i < str1.length(); i++) {
-            char ch = str1.charAt(i);
-            if (ch != str2.charAt(str2.length() - 1)) {
-                str2 += ch;
+        String cipherText = "";
+        char alphabet;
+
+        for (int i = 0; i < input.length(); i++){
+            alphabet = input.charAt(i);
+
+            if (alphabet >= 'a' && alphabet <= 'z'){
+                alphabet = (char) (alphabet + key);
+
+                if (alphabet > 'z'){
+                    alphabet = (char) (alphabet+'a'-'z'-1);
+                }
+                cipherText = cipherText + alphabet;
+            }else if (alphabet >= 'A' && alphabet <='Z'){
+                alphabet = (char) (alphabet + key);
+
+                if (alphabet > 'Z'){
+                    alphabet = (char) (alphabet+'A'-'Z'-1);
+                }
+                cipherText = cipherText + alphabet;
+            }else {
+                cipherText = cipherText + alphabet;
             }
         }
-
-        System.out.println(str2);
+        System.out.println(cipherText);
     }
 }
