@@ -4,6 +4,7 @@ public class Main {
 
     // write a method here
     public static int[] getFirstAndLast(int[] input){
+
         return new int[] {input[0], input[input.length-1]};
     }
 
