@@ -8,4 +8,9 @@ class Application {
             System.out.println(args[i]);
         }
     }
+
+    public static void main(String[] args){
+        String[] input = new String[] {"args1", "args2", "args3"};
+        run(input);
+    }
 }
