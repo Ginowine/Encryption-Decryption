@@ -6,6 +6,8 @@
       <module name="Encryption-Decryption-task_test" target="11" />
       <module name="Problems-Adding_values_main" target="11" />
       <module name="Problems-Adding_values_test" target="11" />
+      <module name="Problems-Advanced_calculator_main" target="11" />
+      <module name="Problems-Advanced_calculator_test" target="11" />
       <module name="Problems-Application_as_a_class_main" target="11" />
       <module name="Problems-Application_as_a_class_test" target="11" />
       <module name="Problems-Compression_algorithm_main" target="11" />
