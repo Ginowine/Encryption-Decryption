@@ -19,6 +19,10 @@ subprojects {
         testImplementation 'com.github.hyperskill:hs-test:release-SNAPSHOT'
     }
 
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+
     sourceSets {
         main.java.srcDir 'src'
         test.java.srcDir 'test'

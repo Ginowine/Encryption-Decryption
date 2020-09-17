@@ -18,6 +18,8 @@
       <module name="Problems-Palindrome_test" target="11" />
       <module name="Problems-Parameters_and_their_values_main" target="11" />
       <module name="Problems-Parameters_and_their_values_test" target="11" />
+      <module name="Problems-The_index_of_an_argument_main" target="11" />
+      <module name="Problems-The_index_of_an_argument_test" target="11" />
       <module name="util_main" target="11" />
       <module name="util_test" target="11" />
     </bytecodeTargetLevel>
