@@ -4,7 +4,6 @@ class Problem {
     public static void main(String[] args) {
         String operator = args[0];
         // write your code here
-
         switch (operator) {
             case "MAX":
                 int maxValue = Integer.parseInt(args[1]);
