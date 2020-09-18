@@ -12,6 +12,8 @@
       <module name="Problems-Application_as_a_class_test" target="11" />
       <module name="Problems-Compression_algorithm_main" target="11" />
       <module name="Problems-Compression_algorithm_test" target="11" />
+      <module name="Problems-Creating_instances_main" target="11" />
+      <module name="Problems-Creating_instances_test" target="11" />
       <module name="Problems-Double_characters_main" target="11" />
       <module name="Problems-Double_characters_test" target="11" />
       <module name="Problems-Fix_compile-time_errors_main" target="11" />
