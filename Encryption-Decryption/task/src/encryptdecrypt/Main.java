@@ -1,60 +1,47 @@
 package encryptdecrypt;
 
 public class Main {
-
     public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//        String operation = scanner.nextLine();
-//        String message = scanner.nextLine();
-//        int key = scanner.nextInt();
-//        if (operation.equals("enc")) {
-//            encrypt(message, key);
-//        } else if (operation.equals("dec")) {
-//            decrypt(message, key);
-//        }
-
-        String mode = "";
-        String key = "";
+        int key = 0;
         String data = "";
+        String mode = "";
 
-        for (String arg : args) {
-            switch (arg) {
+        for (int i = 0; i < args.length; i += 2) {
+            String command = args[i];
+            switch (command) {
                 case "-mode":
-                    mode = args[1];
-                    break;
-                case "-key":
-                    key = args[3];
+                    mode = args[i+1];
                     break;
                 case "-data":
-                    data = args[5];
+                    data = args[i+1];
+                    break;
+                case "-key":
+                    key = Integer.parseInt(args[i+1]);
                     break;
             }
         }
 
-        if (mode.equals("enc")){
-            encrypt(data, Integer.parseInt(key));
-        }else if (mode.equals("dec")){
-            decrypt(data, Integer.parseInt(key));
+        switch (mode) {
+            case "dec":
+                decrypt(data, key);
+                break;
+            default:
+                encrypt(data, key);
+        }
+    }
+    public static void encrypt(String message, int key) {
+        for (int i = 0; i < message.length(); i++) {
+            int ch = message.charAt(i);
+            ch += key;
+            System.out.print((char) ch);
         }
     }
 
-    public static String encrypt(String msg, int key) {
-        StringBuilder encryptedMessage = new StringBuilder();
-        for (int i = 0; i < msg.length(); i++) {
-            int index = msg.charAt(i);
-            encryptedMessage.append((char) (index + key));
+    public static void decrypt(String message, int key) {
+        for (int i = 0; i < message.length(); i++) {
+            int ch = message.charAt(i);
+            ch -= key;
+            System.out.print((char) ch);
         }
-        System.out.println(encryptedMessage);
-        return encryptedMessage.toString();
-    }
-
-    public static String decrypt(String msg, int key) {
-        StringBuilder encryptedMessage = new StringBuilder();
-        for (int i = 0; i < msg.length(); i++) {
-            int index = msg.charAt(i);
-            encryptedMessage.append((char) (index - key));
-        }
-        System.out.println(encryptedMessage);
-        return encryptedMessage.toString();
     }
 }
