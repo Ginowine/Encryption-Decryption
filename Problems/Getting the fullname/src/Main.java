@@ -3,8 +3,8 @@ class User {
     private String lastName;
 
     public User() {
-        this.firstName = "";
-        this.lastName = "";
+        this.firstName = null;
+        this.lastName = null;
     }
 
 
@@ -13,7 +13,7 @@ class User {
         if (firstName != null){
             this.firstName = firstName;
         }else {
-            this.firstName = "";
+            this.firstName = null;
         }
     }
 
@@ -22,7 +22,7 @@ class User {
         if (lastName != null){
             this.lastName = lastName;
         }else {
-            this.lastName = "";
+            this.lastName = null;
         }
     }
 
