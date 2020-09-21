@@ -28,6 +28,8 @@
       <module name="Problems-Fix_the_program_test" target="11" />
       <module name="Problems-Get_first_and_last_elements_main" target="11" />
       <module name="Problems-Get_first_and_last_elements_test" target="11" />
+      <module name="Problems-Getting_the_fullname_main" target="11" />
+      <module name="Problems-Getting_the_fullname_test" target="11" />
       <module name="Problems-Palindrome_main" target="11" />
       <module name="Problems-Palindrome_test" target="11" />
       <module name="Problems-Parameters_and_their_values_main" target="11" />
