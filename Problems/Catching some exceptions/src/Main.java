@@ -8,10 +8,10 @@ public class Main {
         // invoke methodThrowingExceptions here and catch some types of exceptions
         try {
             methodThrowingExceptions();
-        }catch (ArrayIndexOutOfBoundsException | NumberFormatException e){
-            System.out.println("Caught: " + e.getClass().getName());
-        }catch (Exception e){
-            System.out.println(e.getClass().getName());
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println(e.getClass().getSimpleName());
+        }catch (NumberFormatException e){
+            System.out.println(e.getClass().getSimpleName());
         }
     }
 
