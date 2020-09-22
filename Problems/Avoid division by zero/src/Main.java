@@ -11,6 +11,7 @@ class FixingArithmeticException {
         int d = scanner.nextInt();
 
         int result;
+
         if (b + c != 0 && d != 0){
             result = a / ((b + c) / d);
             System.out.println(result);
