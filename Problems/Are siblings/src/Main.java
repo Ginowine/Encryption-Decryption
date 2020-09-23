@@ -1,17 +1,26 @@
+import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Scanner;
 
 class Siblings {
 
     public static void main(String[] args) throws IOException {
+        int sum = 0;
+        String pathToFile = "C:\\Users\\Gino\\Documents\\JavaCodes\\dataset_91033.txt";
+        File file = new File(pathToFile);
+        Scanner scanner = new Scanner(file);
+            while (scanner.hasNext()){
+                int i = scanner.nextInt();
+                sum += i;
+            }
+        System.out.println(sum);
+        }
 
-        String pathToFile = "file:\\Users\\Gino\\Documents\\JavaCodes\\dataset_91007.txt";
 
-        System.out.print(new Scanner(new URL(pathToFile).openStream(), "UTF-8")
-                .tokens()
-                .mapToInt(Integer::parseInt)
-                .max());
+//        System.out.print(new Scanner(new URL(pathToFile).openStream(), "UTF-8")
+//                .tokens()
+//                .mapToInt(Integer::parseInt)
+//                .max());
 //        File file = new File(pathToFile);
 //        int numbers[] = new int[];
 //        int max;
@@ -36,16 +45,6 @@ class Siblings {
 //        }
     }
 
-
-
-
-
-
-
-
-
-
-
 //    public static boolean areSiblings(File f1, File f2) {
 //        // implement me
 //        boolean check = false;
@@ -54,4 +53,4 @@ class Siblings {
 //        }
 //        return check;
 //    }
-}
+//}
