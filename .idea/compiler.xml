@@ -24,6 +24,8 @@
       <module name="Problems-Classes_for_Hospital_test" target="11" />
       <module name="Problems-Compression_algorithm_main" target="11" />
       <module name="Problems-Compression_algorithm_test" target="11" />
+      <module name="Problems-Converting_and_multiplying_main" target="11" />
+      <module name="Problems-Converting_and_multiplying_test" target="11" />
       <module name="Problems-Creating_instances_main" target="11" />
       <module name="Problems-Creating_instances_test" target="11" />
       <module name="Problems-Double_characters_main" target="11" />
