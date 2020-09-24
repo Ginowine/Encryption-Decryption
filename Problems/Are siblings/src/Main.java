@@ -1,19 +1,25 @@
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
 
 class Siblings {
 
     public static void main(String[] args) throws IOException {
-        int sum = 0;
-        String pathToFile = "C:\\Users\\Gino\\Documents\\JavaCodes\\dataset_91033.txt";
-        File file = new File(pathToFile);
-        Scanner scanner = new Scanner(file);
-            while (scanner.hasNext()){
-                int i = scanner.nextInt();
-                sum += i;
-            }
-        System.out.println(sum);
+
+        File file = new File("C:\\Users\\Gino\\Documents\\JavaCodes\\gino.txt");
+        FileWriter writer = new FileWriter(file, true);
+        writer.write("Never ever give up bro\n");
+        writer.write("Na there you go know say God dey\n");
+        writer.close();
+//        int sum = 0;
+//        String pathToFile = "C:\\Users\\Gino\\Documents\\JavaCodes\\dataset_91033.txt";
+//        File file = new File(pathToFile);
+//        Scanner scanner = new Scanner(file);
+//            while (scanner.hasNext()){
+//                int i = scanner.nextInt();
+//                sum += i;
+//            }
+//        System.out.println(sum);
         }
 
 
