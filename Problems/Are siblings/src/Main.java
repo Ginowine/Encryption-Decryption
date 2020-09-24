@@ -8,8 +8,8 @@ class Siblings {
 
         File file = new File("C:\\Users\\Gino\\Documents\\JavaCodes\\gino.txt");
         FileWriter writer = new FileWriter(file, true);
-        writer.write("Never ever give up bro\n");
-        writer.write("Na there you go know say God dey\n");
+        writer.write("Never evhdfhjdfhfdkhdh p bro\r\n");
+        writer.write("Na there you go knonbcsgchjfhnw say God dey\r\n");
         writer.close();
 //        int sum = 0;
 //        String pathToFile = "C:\\Users\\Gino\\Documents\\JavaCodes\\dataset_91033.txt";
