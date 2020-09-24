@@ -1,14 +1,21 @@
-import java.io.FileWriter;
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 class Siblings {
 
     public static void main(String[] args) throws IOException {
 
-        String filepath = "C:\\Users\\Gino\\Documents\\JavaCodes\\gino.txt"; // relative path to the file
-        printRangeToFile(filepath, false, 0, 10);
-        printRangeToFile(filepath, true, 10, 20);
-        printRangeToFile(filepath, false, 20, 30);
+        File file = new File("C:\\Users\\Gino\\Documents\\JavaCodes\\gino.txt"); // some file
+
+        try (PrintWriter printWriter = new PrintWriter(file)) {
+            printWriter.printf("%s dolor sit %s", "Lorem", "ipsum", "amet");
+        }
+
+//        String filepath = "C:\\Users\\Gino\\Documents\\JavaCodes\\gino.txt"; // relative path to the file
+//        printRangeToFile(filepath, false, 0, 10);
+//        printRangeToFile(filepath, true, 10, 20);
+//        printRangeToFile(filepath, false, 20, 30);
 
 //        File file = new File("C:\\Users\\Gino\\Documents\\JavaCodes\\gino.txt");
 //        FileWriter writer = new FileWriter(file, true);
@@ -26,15 +33,15 @@ class Siblings {
 //        System.out.println(sum);
         }
 
-    public static void printRangeToFile(String file, boolean append, int fromIncl, int toExcl) {
-        try (FileWriter writer = new FileWriter(file, append)) {
-            for (int i = fromIncl; i < toExcl; i++) {
-                writer.write(i + " ");
-            }
-        } catch (IOException e) {
-            System.out.printf("An exception occurs %s", e.getMessage());
-        }
-    }
+//    public static void printRangeToFile(String file, boolean append, int fromIncl, int toExcl) {
+//        try (FileWriter writer = new FileWriter(file, append)) {
+//            for (int i = fromIncl; i < toExcl; i++) {
+//                writer.write(i + " ");
+//            }
+//        } catch (IOException e) {
+//            System.out.printf("An exception occurs %s", e.getMessage());
+//        }
+//    }
 
 
 //        System.out.print(new Scanner(new URL(pathToFile).openStream(), "UTF-8")
