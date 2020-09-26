@@ -55,15 +55,13 @@ public class Main {
             try {
                 data = readFileAsString(readFromFile);
                 sourceOfData = data;
+                File file = new File(writeData);
+                PrintWriter printWriter = new PrintWriter(file);
                 for (int i = 0; i < sourceOfData.length(); i++){
                     int ch = sourceOfData.charAt(i);
                     ch += key;
-                    File file = new File(writeData);
-                    try(PrintWriter printWriter = new PrintWriter(file)) {
-                        printWriter.print((char) ch);
-                    }catch (IOException e){
-                    System.out.printf("An exception occurs %s", e.getMessage());
-        }
+                    printWriter.write((char) ch);
+                    printWriter.flush();
                 }
             }catch (IOException e){
                 System.out.println("Cannot find one of the file: " + e.getMessage());
