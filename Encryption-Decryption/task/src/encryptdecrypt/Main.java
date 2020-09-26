@@ -1,16 +1,21 @@
 package encryptdecrypt;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class Main {
+
+    static String writeData = "";
+    static String data = "";
     public static void main(String[] args) {
         int key = 0;
         String data = "";
         String mode = "";
         String readData = "";
-        String writeData = "";
+
 
         //String fileUrl = "C:\\Users\\Gino\\Documents\\JavaCodes\\gino.txt";
 
@@ -44,28 +49,32 @@ public class Main {
         }
     }
 
-    public static String readFileAsString(String fileName) throws IOException{
-        return new String(Files.readAllBytes(Paths.get(fileName)));
-    }
     public static void encrypt(String message, int key, String readFromFile) {
         String sourceOfData = "";
-        try {
-            sourceOfData = readFileAsString(readFromFile);
-        }catch (IOException e){
-            System.out.println("Cannot read file: " + e.getMessage());
-        }
-
         if (message.isEmpty()){
-            sourceOfData = sourceOfData;
+            try {
+                data = readFileAsString(readFromFile);
+                sourceOfData = data;
+                for (int i = 0; i < sourceOfData.length(); i++){
+                    int ch = sourceOfData.charAt(i);
+                    ch += key;
+                    File file = new File(writeData);
+                    try(PrintWriter printWriter = new PrintWriter(file)) {
+                        printWriter.print((char) ch);
+                    }catch (IOException e){
+                    System.out.printf("An exception occurs %s", e.getMessage());
+        }
+                }
+            }catch (IOException e){
+                System.out.println("Cannot find one of the file: " + e.getMessage());
+            }
         }else {
             sourceOfData = message;
-        }
-
-
-        for (int i = 0; i < sourceOfData.length(); i++) {
-            int ch = sourceOfData.charAt(i);
-            ch += key;
-            System.out.print((char) ch);
+            for (int i = 0; i < sourceOfData.length(); i++){
+                int ch = sourceOfData.charAt(i);
+                ch += key;
+                System.out.print((char) ch);
+            }
         }
     }
 
@@ -75,5 +84,24 @@ public class Main {
             ch -= key;
             System.out.print((char) ch);
         }
+    }
+
+//    public static void writeDataToFile(char dataToWrite, String fileToWriteTo){
+//        File file = new File(fileToWriteTo);
+//        try(FileWriter writer = new FileWriter(file)){
+//            writer.write(dataToWrite);
+//        }catch (IOException e){
+//            System.out.printf("An exception occurs %s", e.getMessage());
+//        }
+//
+////        try(PrintWriter printWriter = new PrintWriter(file)) {
+////            printWriter.println(dataToWrite);
+////        }catch (IOException e){
+////            System.out.printf("An exception occurs %s", e.getMessage());
+////        }
+//    }
+
+    public static String readFileAsString(String fileName) throws IOException{
+        return new String(Files.readAllBytes(Paths.get(fileName)));
     }
 }
