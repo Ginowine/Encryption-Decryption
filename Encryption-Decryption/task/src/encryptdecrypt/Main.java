@@ -62,6 +62,7 @@ public class Main {
                     ch += key;
                     printWriter.write((char) ch);
                     printWriter.flush();
+                    printWriter.close();
                 }
             }catch (IOException e){
                 System.out.println("Cannot find one of the file: " + e.getMessage());
