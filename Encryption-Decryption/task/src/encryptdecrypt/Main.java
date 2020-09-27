@@ -7,7 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class Main {
-
     static String writeData = "";
     static String data = "";
     static String readData = "";
@@ -15,10 +14,6 @@ public class Main {
         int key = 0;
         String data = "";
         String mode = "";
-
-
-
-        //String fileUrl = "C:\\Users\\Gino\\Documents\\JavaCodes\\gino.txt";
 
         for (int i = 0; i < args.length; i += 2) {
             String command = args[i];
@@ -41,33 +36,17 @@ public class Main {
             }
         }
 
-        switch (mode) {
-            case "dec":
-                decrypt(data, key, writeData);
-                break;
-            default:
-                encrypt(data, key, readData);
+        if ("dec".equals(mode)) {
+            decrypt(data, key, writeData);
+        } else {
+            encrypt(data, key, readData);
         }
     }
 
     public static void encrypt(String message, int key, String readFromFile) {
         String sourceOfData = "";
         if (message.isEmpty()){
-            try {
-                data = readFileAsString(readFromFile);
-                sourceOfData = data;
-                File file = new File(writeData);
-                PrintWriter printWriter = new PrintWriter(file);
-                for (int i = 0; i < sourceOfData.length(); i++){
-                    int ch = sourceOfData.charAt(i);
-                    ch += key;
-                    printWriter.write((char) ch);
-                    printWriter.flush();
-                    printWriter.close();
-                }
-            }catch (IOException e){
-                System.out.println("Error writing or reading data from file: " + e.getMessage());
-            }
+            readDataFromFile(key, readFromFile, writeData);
         }else {
             sourceOfData = message;
             for (int i = 0; i < sourceOfData.length(); i++){
@@ -78,25 +57,29 @@ public class Main {
         }
     }
 
+    private static void readDataFromFile(int key, String readFromFile, String writeData) {
+        String sourceOfData;
+        try {
+            data = readFileAsString(readFromFile);
+            sourceOfData = data;
+            File file = new File(writeData);
+            PrintWriter printWriter = new PrintWriter(file);
+            for (int i = 0; i < sourceOfData.length(); i++){
+                int ch = sourceOfData.charAt(i);
+                ch += key;
+                printWriter.write((char) ch);
+                printWriter.flush();
+               // printWriter.close();
+            }
+        }catch (IOException e){
+            System.out.println("Error writing or reading data from file: " + e.getMessage());
+        }
+    }
+
     public static void decrypt(String message, int key, String readDataFromFile) {
         String sourceData = "";
         if (message.isEmpty()){
-            try {
-                data = readFileAsString(readDataFromFile);
-                sourceData = data;
-
-                File file = new File(readData);
-                PrintWriter printWriter = new PrintWriter(file);
-                for (int i = 0; i < sourceData.length(); i++){
-                    int ch = sourceData.charAt(i);
-                    ch += key;
-                    printWriter.write((char) ch);
-                    printWriter.flush();
-                    printWriter.close();
-                }
-            }catch (IOException e){
-                System.out.println("Error writing or reading data from file: " + e.getMessage());
-            }
+            readDataFromFile(key, readDataFromFile, readData);
         }else {
             sourceData = message;
 
