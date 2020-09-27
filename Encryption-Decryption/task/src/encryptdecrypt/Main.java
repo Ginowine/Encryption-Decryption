@@ -100,7 +100,7 @@ public class Main {
         }else {
             sourceData = message;
 
-            for (int i = 0; i < message.length(); i++) {
+            for (int i = 0; i < sourceData.length(); i++) {
                 int ch = message.charAt(i);
                 ch -= key;
                 System.out.print((char) ch);
