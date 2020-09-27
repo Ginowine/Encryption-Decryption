@@ -10,11 +10,12 @@ public class Main {
 
     static String writeData = "";
     static String data = "";
+    static String readData = "";
     public static void main(String[] args) {
         int key = 0;
         String data = "";
         String mode = "";
-        String readData = "";
+
 
 
         //String fileUrl = "C:\\Users\\Gino\\Documents\\JavaCodes\\gino.txt";
@@ -42,7 +43,7 @@ public class Main {
 
         switch (mode) {
             case "dec":
-                decrypt(data, key);
+                decrypt(data, key, writeData);
                 break;
             default:
                 encrypt(data, key, readData);
@@ -65,7 +66,7 @@ public class Main {
                     printWriter.close();
                 }
             }catch (IOException e){
-                System.out.println("Cannot find one of the file: " + e.getMessage());
+                System.out.println("Error writing or reading data from file: " + e.getMessage());
             }
         }else {
             sourceOfData = message;
@@ -77,28 +78,35 @@ public class Main {
         }
     }
 
-    public static void decrypt(String message, int key) {
-        for (int i = 0; i < message.length(); i++) {
-            int ch = message.charAt(i);
-            ch -= key;
-            System.out.print((char) ch);
+    public static void decrypt(String message, int key, String readDataFromFile) {
+        String sourceData = "";
+        if (message.isEmpty()){
+            try {
+                data = readFileAsString(readDataFromFile);
+                sourceData = data;
+
+                File file = new File(readData);
+                PrintWriter printWriter = new PrintWriter(file);
+                for (int i = 0; i < sourceData.length(); i++){
+                    int ch = sourceData.charAt(i);
+                    ch += key;
+                    printWriter.write((char) ch);
+                    printWriter.flush();
+                    printWriter.close();
+                }
+            }catch (IOException e){
+                System.out.println("Error writing or reading data from file: " + e.getMessage());
+            }
+        }else {
+            sourceData = message;
+
+            for (int i = 0; i < message.length(); i++) {
+                int ch = message.charAt(i);
+                ch -= key;
+                System.out.print((char) ch);
+            }
         }
     }
-
-//    public static void writeDataToFile(char dataToWrite, String fileToWriteTo){
-//        File file = new File(fileToWriteTo);
-//        try(FileWriter writer = new FileWriter(file)){
-//            writer.write(dataToWrite);
-//        }catch (IOException e){
-//            System.out.printf("An exception occurs %s", e.getMessage());
-//        }
-//
-////        try(PrintWriter printWriter = new PrintWriter(file)) {
-////            printWriter.println(dataToWrite);
-////        }catch (IOException e){
-////            System.out.printf("An exception occurs %s", e.getMessage());
-////        }
-//    }
 
     public static String readFileAsString(String fileName) throws IOException{
         return new String(Files.readAllBytes(Paths.get(fileName)));

@@ -121,6 +121,9 @@ files:
         }
     }
   learner_created: false
+- name: output.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/46/stages/249/implement
-status: Unchecked
+status: Failed
 record: -1
