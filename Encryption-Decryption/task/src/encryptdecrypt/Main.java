@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class Main {
+
     static String writeData = "";
     static String data = "";
     static String readData = "";
@@ -37,7 +38,7 @@ public class Main {
         }
 
         if ("dec".equals(mode)) {
-            decrypt(data, key, writeData);
+            decrypt(data, key, readData);
         } else {
             encrypt(data, key, readData);
         }
@@ -46,7 +47,21 @@ public class Main {
     public static void encrypt(String message, int key, String readFromFile) {
         String sourceOfData = "";
         if (message.isEmpty()){
-            readDataFromFile(key, readFromFile, writeData);
+            try {
+                data = readFileAsString(readFromFile);
+                sourceOfData = data;
+                File file = new File(writeData);
+                PrintWriter printWriter = new PrintWriter(file);
+                for (int i = 0; i < sourceOfData.length(); i++){
+                    int ch = sourceOfData.charAt(i);
+                    ch += key;
+                    printWriter.write((char) ch);
+                    printWriter.flush();
+                    //printWriter.close();
+                }
+            }catch (IOException e){
+                System.out.println("Error writing or reading data from file: " + e.getMessage());
+            }
         }else {
             sourceOfData = message;
             for (int i = 0; i < sourceOfData.length(); i++){
@@ -57,29 +72,25 @@ public class Main {
         }
     }
 
-    private static void readDataFromFile(int key, String readFromFile, String writeData) {
-        String sourceOfData;
-        try {
-            data = readFileAsString(readFromFile);
-            sourceOfData = data;
-            File file = new File(writeData);
-            PrintWriter printWriter = new PrintWriter(file);
-            for (int i = 0; i < sourceOfData.length(); i++){
-                int ch = sourceOfData.charAt(i);
-                ch += key;
-                printWriter.write((char) ch);
-                printWriter.flush();
-               // printWriter.close();
-            }
-        }catch (IOException e){
-            System.out.println("Error writing or reading data from file: " + e.getMessage());
-        }
-    }
-
     public static void decrypt(String message, int key, String readDataFromFile) {
         String sourceData = "";
         if (message.isEmpty()){
-            readDataFromFile(key, readDataFromFile, readData);
+            try {
+                data = readFileAsString(readDataFromFile);
+                sourceData = data;
+
+                File file = new File(writeData);
+                PrintWriter printWriter = new PrintWriter(file);
+                for (int i = 0; i < sourceData.length(); i++){
+                    int ch = sourceData.charAt(i);
+                    ch -= key;
+                    printWriter.write((char) ch);
+                    printWriter.flush();
+                    //printWriter.close();
+                }
+            }catch (IOException e){
+                System.out.println("Error writing or reading data from file: " + e.getMessage());
+            }
         }else {
             sourceData = message;
 

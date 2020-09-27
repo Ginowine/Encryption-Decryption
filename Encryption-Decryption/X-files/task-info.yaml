@@ -124,6 +124,9 @@ files:
 - name: output.txt
   visible: true
   learner_created: true
+- name: input.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/46/stages/249/implement
-status: Failed
+status: Solved
 record: -1
