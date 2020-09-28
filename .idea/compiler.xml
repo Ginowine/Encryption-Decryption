@@ -44,6 +44,8 @@
       <module name="Problems-Palindrome_test" target="11" />
       <module name="Problems-Parameters_and_their_values_main" target="11" />
       <module name="Problems-Parameters_and_their_values_test" target="11" />
+      <module name="Problems-Phone_main" target="11" />
+      <module name="Problems-Phone_test" target="11" />
       <module name="Problems-Print_main" target="11" />
       <module name="Problems-Print_test" target="11" />
       <module name="Problems-Sorting_arrays_main" target="11" />
@@ -52,6 +54,8 @@
       <module name="Problems-String_to_double_conversion_test" target="11" />
       <module name="Problems-The_index_of_an_argument_main" target="11" />
       <module name="Problems-The_index_of_an_argument_test" target="11" />
+      <module name="Problems-Time_main" target="11" />
+      <module name="Problems-Time_test" target="11" />
       <module name="util_main" target="11" />
       <module name="util_test" target="11" />
     </bytecodeTargetLevel>
