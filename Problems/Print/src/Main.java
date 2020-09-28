@@ -8,7 +8,7 @@ public class Main {
 
     // write your method here
     public static void print(String str, int i){
-        System.out.println("print(\"" + str + "\")" + ", " + i );
+        System.out.println("print(\"" + str + "\", " + i + ")");
     }
 
     /* Do not change code below */
