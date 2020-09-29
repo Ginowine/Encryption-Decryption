@@ -54,6 +54,8 @@
       <module name="Problems-Phone_test" target="11" />
       <module name="Problems-Print_main" target="11" />
       <module name="Problems-Print_test" target="11" />
+      <module name="Problems-Publications_main" target="11" />
+      <module name="Problems-Publications_test" target="11" />
       <module name="Problems-Saying_animals_main" target="11" />
       <module name="Problems-Saying_animals_test" target="11" />
       <module name="Problems-Shapes_area_main" target="11" />
