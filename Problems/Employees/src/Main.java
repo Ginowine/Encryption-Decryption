@@ -52,8 +52,19 @@ class Developer extends Employee {
 class DataAnalyst extends Employee {
 
     // write fields
+    protected String phd;
+    protected String methods;
 
     // write constructor
+    public DataAnalyst(String name, String email, int experience, String phd, String methods){
+        super(name, email, experience);
+        this.phd = phd;
+        this.methods = methods;
+    }
 
     // write getters
+    public String getPhd(){
+        return phd;
+    }
+
 }
