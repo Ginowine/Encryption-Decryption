@@ -54,6 +54,8 @@
       <module name="Problems-Phone_test" target="11" />
       <module name="Problems-Print_main" target="11" />
       <module name="Problems-Print_test" target="11" />
+      <module name="Problems-Saying_animals_main" target="11" />
+      <module name="Problems-Saying_animals_test" target="11" />
       <module name="Problems-Sorting_arrays_main" target="11" />
       <module name="Problems-Sorting_arrays_test" target="11" />
       <module name="Problems-String_to_double_conversion_main" target="11" />

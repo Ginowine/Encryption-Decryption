@@ -64,7 +64,7 @@ class DataAnalyst extends Employee {
 
     // write getters
     public boolean isPhd(){
-        return phd;
+        return true;
     }
 
     public String[] getMethods(){
