@@ -36,6 +36,8 @@
       <module name="Problems-Employee_test" target="11" />
       <module name="Problems-Fix_compile-time_errors_main" target="11" />
       <module name="Problems-Fix_compile-time_errors_test" target="11" />
+      <module name="Problems-Fix_the_non-compiled_hierarchy_main" target="11" />
+      <module name="Problems-Fix_the_non-compiled_hierarchy_test" target="11" />
       <module name="Problems-Fix_the_program_main" target="11" />
       <module name="Problems-Fix_the_program_test" target="11" />
       <module name="Problems-Get_first_and_last_elements_main" target="11" />
