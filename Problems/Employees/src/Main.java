@@ -67,4 +67,7 @@ class DataAnalyst extends Employee {
         return phd;
     }
 
+    public String getMethods(){
+        return methods;
+    }
 }
