@@ -34,6 +34,8 @@
       <module name="Problems-Double_characters_test" target="11" />
       <module name="Problems-Employee_main" target="11" />
       <module name="Problems-Employee_test" target="11" />
+      <module name="Problems-Employees_main" target="11" />
+      <module name="Problems-Employees_test" target="11" />
       <module name="Problems-Fix_compile-time_errors_main" target="11" />
       <module name="Problems-Fix_compile-time_errors_test" target="11" />
       <module name="Problems-Fix_the_non-compiled_hierarchy_main" target="11" />
