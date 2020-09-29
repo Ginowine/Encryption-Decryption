@@ -30,10 +30,10 @@ class Developer extends Employee {
 
     // write fields
     protected String mainLanguage;
-    protected String skills;
+    protected String [] skills;
 
     // write constructor
-    public Developer(String name, String email, int experience, String mainLanguage, String skills){
+    public Developer(String name, String email, int experience, String mainLanguage, String[] skills){
         super(name, email, experience);
         this.mainLanguage = mainLanguage;
         this.skills = skills;
@@ -44,7 +44,7 @@ class Developer extends Employee {
         return mainLanguage;
     }
 
-    public String getSkills(){
+    public String[] getSkills(){
         return skills;
     }
 }
@@ -52,22 +52,22 @@ class Developer extends Employee {
 class DataAnalyst extends Employee {
 
     // write fields
-    protected String phd;
-    protected String methods;
+    protected boolean phd;
+    protected String[] methods;
 
     // write constructor
-    public DataAnalyst(String name, String email, int experience, String phd, String methods){
+    public DataAnalyst(String name, String email, int experience, boolean phd, String[] methods){
         super(name, email, experience);
         this.phd = phd;
         this.methods = methods;
     }
 
     // write getters
-    public String getPhd(){
+    public boolean isPhd(){
         return phd;
     }
 
-    public String getMethods(){
+    public String[] getMethods(){
         return methods;
     }
 }
