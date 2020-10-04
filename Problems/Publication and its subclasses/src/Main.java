@@ -1,6 +1,6 @@
 class Publication {
 
-    private String title;
+    public String title;
 
     public Publication(String title) {
         this.title = title;
@@ -8,6 +8,10 @@ class Publication {
 
     public final String getInfo() {
         // write your code here
+        String type = getType();
+        String details = getDetails();
+
+        return  type + ": " + details;
 
     }
 
@@ -16,7 +20,7 @@ class Publication {
     }
 
     public String getDetails() {
-        return "";
+        return "The new era";
     }
 
 }
@@ -32,7 +36,6 @@ class Newspaper extends Publication {
 
     // write your code here
 
-
     @Override
     public String getType() {
         return super.getType();
@@ -40,7 +43,7 @@ class Newspaper extends Publication {
 
     @Override
     public String getDetails() {
-        return super.getDetails();
+        return "(source - " + source + "): " + title;
     }
 }
 
