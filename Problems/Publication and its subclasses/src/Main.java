@@ -8,6 +8,11 @@ class Publication {
 
     public final String getInfo() {
         // write your code here
+//        String type = getType();
+//        String details = getDetails();
+
+        //return  type + details;
+
         return getType() + getDetails();
 
     }
