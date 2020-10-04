@@ -64,6 +64,8 @@
       <module name="Problems-Publications_test" target="11" />
       <module name="Problems-Saying_animals_main" target="11" />
       <module name="Problems-Saying_animals_test" target="11" />
+      <module name="Problems-Shape_hierarchy_main" target="11" />
+      <module name="Problems-Shape_hierarchy_test" target="11" />
       <module name="Problems-Shapes_area_main" target="11" />
       <module name="Problems-Shapes_area_test" target="11" />
       <module name="Problems-Sorting_arrays_main" target="11" />
