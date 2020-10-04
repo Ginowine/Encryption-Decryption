@@ -11,16 +11,16 @@ class Publication {
         String type = getType();
         String details = getDetails();
 
-        return  type + ": " + details;
+        return  type + details;
 
     }
 
     public String getType() {
-        return "Publication";
+        return "Publication: ";
     }
 
     public String getDetails() {
-        return "The new era";
+        return title;
     }
 
 }
@@ -38,7 +38,7 @@ class Newspaper extends Publication {
 
     @Override
     public String getType() {
-        return "Newspaper";
+        return "Newspaper ";
     }
 
     @Override
