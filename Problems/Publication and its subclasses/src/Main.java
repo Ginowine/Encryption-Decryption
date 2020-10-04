@@ -38,7 +38,7 @@ class Newspaper extends Publication {
 
     @Override
     public String getType() {
-        return super.getType();
+        return "Newspaper";
     }
 
     @Override
@@ -61,12 +61,12 @@ class Article extends Publication {
 
     @Override
     public String getType() {
-        return super.getType();
+        return "Article";
     }
 
     @Override
     public String getDetails() {
-        return super.getDetails();
+        return "(author - " + author + "): " + title;
     }
 }
 
@@ -82,11 +82,11 @@ class Announcement extends Publication {
     // write your code here
     @Override
     public String getType() {
-        return super.getType();
+        return "Announcements";
     }
 
     @Override
     public String getDetails() {
-        return super.getDetails();
+        return "(days to expire - " + daysToExpire + "): " + title;
     }
 }
