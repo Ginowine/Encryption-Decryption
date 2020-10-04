@@ -8,10 +8,7 @@ class Publication {
 
     public final String getInfo() {
         // write your code here
-        String type = getType();
-        String details = getDetails();
-
-        return  type + details;
+        return getType() + getDetails();
 
     }
 
@@ -61,7 +58,7 @@ class Article extends Publication {
 
     @Override
     public String getType() {
-        return "Article";
+        return "Article ";
     }
 
     @Override
@@ -82,7 +79,7 @@ class Announcement extends Publication {
     // write your code here
     @Override
     public String getType() {
-        return "Announcements";
+        return "Announcement ";
     }
 
     @Override
