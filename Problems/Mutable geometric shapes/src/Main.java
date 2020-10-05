@@ -37,12 +37,12 @@ final class Circle implements  MutableShape{
 
     @Override
     public void move(float dx, float dy) {
-
+        float move = dx + dy;
     }
 
     @Override
     public void scale(float factor) {
-
+       float scale = radius * factor;
     }
 
     public float getCenterX() {
