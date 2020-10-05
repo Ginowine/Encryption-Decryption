@@ -25,7 +25,7 @@ class User extends BaseEntity {
     }
     public User(long id, long version, String name) {
         super(id, version);
-       this.name = name;
+        this.name = name;
     }
 
     public String getName() {
@@ -89,22 +89,22 @@ class Visit extends BaseEntity{
 
     @Override
     public long getId() {
-        return 0;
+        return id;
     }
 
     @Override
     public void setId(long id) {
-
+        this.id = id;
     }
 
     @Override
     public long getVersion() {
-        return 0;
+        return version;
     }
 
     @Override
     public void setVersion(long version) {
-
+        this.version = version;
     }
 }
 
@@ -131,21 +131,21 @@ class WebSite extends BaseEntity{
 
     @Override
     public long getId() {
-        return 0;
+        return id;
     }
 
     @Override
     public void setId(long id) {
-
+        this.id = id;
     }
 
     @Override
     public long getVersion() {
-        return 0;
+        return version;
     }
 
     @Override
     public void setVersion(long version) {
-
+        this.version = version;
     }
 }
