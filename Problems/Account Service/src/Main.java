@@ -25,7 +25,7 @@ class AccountServiceImpl implements AccountService{
     }
     @Override
     public Account findAccountByOwnerId(long id) {
-        for (int i = 0; i < accounts.length - 1; i++){
+        for (int i = 0; i < accounts.length; i++){
             if (accounts[i].getOwner().getId() == id){
                 return accounts[i];
             }
