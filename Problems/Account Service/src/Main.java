@@ -18,6 +18,7 @@ interface AccountService {
 class AccountServiceImpl implements AccountService{
 
     Account[] accounts;
+    long number = 0;
 
     protected AccountServiceImpl(Account[] accounts){
         this.accounts = accounts;
@@ -34,7 +35,12 @@ class AccountServiceImpl implements AccountService{
 
     @Override
     public long countAccountsWithBalanceGreaterThan(long value) {
-        return 0;
+        for (int i = 0; i < accounts.length; i++){
+            if (accounts[i].getBalance() > value){
+                number++;
+            }
+        }
+        return number;
     }
 }
 
