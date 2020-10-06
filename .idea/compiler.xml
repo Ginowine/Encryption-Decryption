@@ -5,6 +5,8 @@
       <module name="Encryption-Decryption-task_main" target="11" />
       <module name="Encryption-Decryption-task_test" target="11" />
       <module name="Problems-Account_main" target="11" />
+      <module name="Problems-Account_Service_main" target="11" />
+      <module name="Problems-Account_Service_test" target="11" />
       <module name="Problems-Account_test" target="11" />
       <module name="Problems-Adding_values_main" target="11" />
       <module name="Problems-Adding_values_test" target="11" />
