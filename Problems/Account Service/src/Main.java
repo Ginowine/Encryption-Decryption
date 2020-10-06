@@ -15,19 +15,19 @@ interface AccountService {
 
 // Declare and implement your AccountServiceImpl here
 
-class AccountServiceImpl implements AccountService{
+class AccountServiceImpl implements AccountService {
 
-    Account[] accounts;
-    long number = 0;
+    private Account[] accounts;
 
-    protected AccountServiceImpl(Account[] accounts){
-        this.accounts = accounts;
+    public AccountServiceImpl(Account[] accounts) {
+        this.accounts = accounts.clone();
     }
+
     @Override
     public Account findAccountByOwnerId(long id) {
-        for (int i = 0; i < accounts.length; i++){
-            if (accounts[i].getOwner().getId() == id){
-                return accounts[i];
+        for (Account account : accounts) {
+            if (account.getOwner().getId() == id) {
+                return account;
             }
         }
         return null;
@@ -35,12 +35,13 @@ class AccountServiceImpl implements AccountService{
 
     @Override
     public long countAccountsWithBalanceGreaterThan(long value) {
-        for (int i = 0; i < accounts.length; i++){
-            if (accounts[i].getBalance() > value){
-                number++;
+        int count = 0;
+        for (Account account : accounts) {
+            if (account.getBalance() > value) {
+                count++;
             }
         }
-        return number;
+        return count;
     }
 }
 
