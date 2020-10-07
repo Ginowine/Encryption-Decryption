@@ -52,6 +52,8 @@
       <module name="Problems-Getting_the_fullname_test" target="11" />
       <module name="Problems-IntBinaryOperation_main" target="11" />
       <module name="Problems-IntBinaryOperation_test" target="11" />
+      <module name="Problems-Max_and_Min_main" target="11" />
+      <module name="Problems-Max_and_Min_test" target="11" />
       <module name="Problems-Mutable_geometric_shapes_main" target="11" />
       <module name="Problems-Mutable_geometric_shapes_test" target="11" />
       <module name="Problems-Palindrome_main" target="11" />
