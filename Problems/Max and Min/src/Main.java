@@ -31,14 +31,17 @@ class MaxFindingStrategy implements FindingStrategy {
 
     public int getResult(int[] numbers) {
         // write your code here
-        int initialMax = numbers[0];
-        for (int i = 0; i < numbers.length; i++){
-            if (numbers[i] > initialMax){
-                initialMax = numbers[i];
+        if (numbers.length == 0){
+            return Integer.MIN_VALUE;
+        }else {
+            int initialMax = numbers[0];
+            for (int i = 0; i < numbers.length; i++){
+                if (numbers[i] > initialMax){
+                    initialMax = numbers[i];
+                }
             }
+            return initialMax;
         }
-
-        return initialMax;
     }
 }
 
