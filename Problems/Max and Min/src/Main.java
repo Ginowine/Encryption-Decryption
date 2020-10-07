@@ -6,6 +6,7 @@ class Finder {
 
     public Finder(FindingStrategy strategy) {
         // write your code here
+        this.strategy = strategy;
     }
 
     /**
@@ -13,6 +14,7 @@ class Finder {
      */
     public int find(int[] numbers) {
         // write your code here
+        this.strategy.getResult(numbers);
     }
 }
 
@@ -29,6 +31,14 @@ class MaxFindingStrategy implements FindingStrategy {
 
     public int getResult(int[] numbers) {
         // write your code here
+        int initialMax = numbers[0];
+        for (int i = 0; i < numbers.length; i++){
+            if (numbers[i] > initialMax){
+                initialMax = numbers[i];
+            }
+        }
+
+        return initialMax;
     }
 }
 
@@ -36,6 +46,13 @@ class MinFindingStrategy implements FindingStrategy {
 
     public int getResult(int[] numbers) {
         // write your code here
+        int initialMin = numbers[0];
+        for (int i = 0; i < numbers.length; i++){
+            if (numbers[i] > initialMin){
+                initialMin = numbers[i];
+            }
+        }
+        return initialMin;
     }
 }
 
