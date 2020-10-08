@@ -33,7 +33,7 @@ class MaxFindingStrategy implements FindingStrategy {
         // write your code here
         if (numbers.length == 0){
             return Integer.MIN_VALUE;
-        }else {
+        }
             int initialMax = numbers[0];
             for (int i = 0; i < numbers.length; i++){
                 if (numbers[i] > initialMax){
@@ -41,7 +41,6 @@ class MaxFindingStrategy implements FindingStrategy {
                 }
             }
             return initialMax;
-        }
     }
 }
 
@@ -51,7 +50,7 @@ class MinFindingStrategy implements FindingStrategy {
         // write your code here
         if (numbers.length == 0){
             return Integer.MAX_VALUE;
-        }else {
+        }
             int initialMin = numbers[0];
             for (int i = 0; i < numbers.length; i++){
                 if (numbers[i] > initialMin){
@@ -59,7 +58,6 @@ class MinFindingStrategy implements FindingStrategy {
                 }
             }
             return initialMin;
-        }
     }
 }
 
