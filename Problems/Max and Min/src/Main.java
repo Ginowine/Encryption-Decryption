@@ -52,11 +52,11 @@ class MinFindingStrategy implements FindingStrategy {
             return Integer.MAX_VALUE;
         }
             int initialMin = numbers[0];
-            for (int i = 0; i < numbers.length; i++){
-                if (numbers[i] < initialMin){
-                    initialMin = numbers[i];
-                }
+        for (int number : numbers) {
+            if (number < initialMin) {
+                initialMin = number;
             }
+        }
             return initialMin;
     }
 }
