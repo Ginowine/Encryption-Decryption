@@ -53,7 +53,7 @@ class MinFindingStrategy implements FindingStrategy {
         }
             int initialMin = numbers[0];
             for (int i = 0; i < numbers.length; i++){
-                if (numbers[i] > initialMin){
+                if (numbers[i] < initialMin){
                     initialMin = numbers[i];
                 }
             }
