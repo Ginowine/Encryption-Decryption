@@ -62,6 +62,8 @@
       <module name="Problems-Parameters_and_their_values_test" target="11" />
       <module name="Problems-Phone_main" target="11" />
       <module name="Problems-Phone_test" target="11" />
+      <module name="Problems-Pick_your_team_main" target="11" />
+      <module name="Problems-Pick_your_team_test" target="11" />
       <module name="Problems-Print_main" target="11" />
       <module name="Problems-Print_test" target="11" />
       <module name="Problems-Publication_and_its_subclasses_main" target="11" />
