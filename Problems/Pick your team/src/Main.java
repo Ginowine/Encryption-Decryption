@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 class SelectionContext {
@@ -7,6 +6,7 @@ class SelectionContext {
 
     public void setAlgorithm(PersonSelectionAlgorithm algorithm) {
         // write your code here
+        this.algorithm = algorithm;
     }
 
     public Person[] selectPersons(Person[] persons) {
@@ -21,7 +21,7 @@ interface PersonSelectionAlgorithm {
 }
 
 class TakePersonsWithStepAlgorithm implements PersonSelectionAlgorithm {
-    private int step;
+     int step;
 
     public TakePersonsWithStepAlgorithm(int step) {
         // write your code here
@@ -31,7 +31,14 @@ class TakePersonsWithStepAlgorithm implements PersonSelectionAlgorithm {
     @Override
     public Person[] select(Person[] persons) {
         // write your code here
-        Person[] result = new Person[persons.length == 1 ? 1: (persons.length - 1)/step + 1];
+        int size = (int) Math.ceil((int) Math.ceil((double) persons.length / (double) step));
+        Person[] result = new Person[size];
+        for (int i = 0; i < persons.length; i++ ){
+            if (i % step == 0){
+                for (int j = 0; j < size; j++)
+                    result[j] = persons[i];
+            }
+        }
         return result;
     }
 }
@@ -39,7 +46,7 @@ class TakePersonsWithStepAlgorithm implements PersonSelectionAlgorithm {
 
 class TakeLastPersonsAlgorithm implements PersonSelectionAlgorithm {
 
-    private int count ;
+    private int count;
 
     public TakeLastPersonsAlgorithm(int count) {
         // write your code here
@@ -49,7 +56,12 @@ class TakeLastPersonsAlgorithm implements PersonSelectionAlgorithm {
     @Override
     public Person[] select(Person[] persons) {
         // write your code here
-        Person[] result = Arrays.copyOfRange(persons, persons.length - count, persons.length);
+//        Person[] result = Arrays.copyOfRange(persons, persons.length - count, persons.length);
+//        return result;
+        Person[] result = new Person[count];
+        for (int ix = 0; ix < count; ix++){
+            result[count - 1 - ix] = persons[persons.length - 1 - ix];
+        }
         return result;
     }
 }
