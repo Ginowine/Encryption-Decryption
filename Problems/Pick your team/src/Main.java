@@ -1,7 +1,7 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 class SelectionContext {
-
     private PersonSelectionAlgorithm algorithm;
 
     public void setAlgorithm(PersonSelectionAlgorithm algorithm) {
@@ -31,15 +31,22 @@ class TakePersonsWithStepAlgorithm implements PersonSelectionAlgorithm {
     @Override
     public Person[] select(Person[] persons) {
         // write your code here
-        int size = (int) Math.ceil((int) Math.ceil((double) persons.length / (double) step));
-        Person[] result = new Person[size];
-        for (int i = 0; i < persons.length; i++ ){
-            if (i % step == 0){
-                for (int j = 0; j < size; j++)
-                    result[j] = persons[i];
+        if (step == 1 || persons.length ==1){
+            return persons;
+        }
+
+        Person[] result = new Person[persons.length == 1 ? 1 : (persons.length - 1) / step + 1];
+
+        for (int i = 0; i < result.length; i += step ){
+            if (persons[i] != null){
+                result[i] = persons[i];
+            }else {
+                result[i] = persons[persons.length -1];
             }
         }
-        return result;
+
+       return result;
+
     }
 }
 
@@ -56,12 +63,7 @@ class TakeLastPersonsAlgorithm implements PersonSelectionAlgorithm {
     @Override
     public Person[] select(Person[] persons) {
         // write your code here
-//        Person[] result = Arrays.copyOfRange(persons, persons.length - count, persons.length);
-//        return result;
-        Person[] result = new Person[count];
-        for (int ix = 0; ix < count; ix++){
-            result[count - 1 - ix] = persons[persons.length - 1 - ix];
-        }
+        Person[] result = Arrays.copyOfRange(persons, persons.length - count, persons.length);
         return result;
     }
 }
