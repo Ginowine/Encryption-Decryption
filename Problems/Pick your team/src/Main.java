@@ -34,9 +34,10 @@ class TakePersonsWithStepAlgorithm implements PersonSelectionAlgorithm {
         Person[] result = new Person[persons.length == 1 ? 1 : (persons.length - 1) / step + 1];
         if (step == 1){
             result[0] = persons[0];
-        }else if (result[]){
-            for (int i = 0; i < persons.length; i += step){
-                result[0] = persons[0];
+            return result;
+        }else{
+            for (int i = 0; i < result.length; i += step){
+                result[i] = persons[i];
             }
         }
         return result;
