@@ -31,22 +31,15 @@ class TakePersonsWithStepAlgorithm implements PersonSelectionAlgorithm {
     @Override
     public Person[] select(Person[] persons) {
         // write your code here
-        if (step == 1 || persons.length ==1){
-            return persons;
-        }
-
         Person[] result = new Person[persons.length == 1 ? 1 : (persons.length - 1) / step + 1];
-
-        for (int i = 0; i < result.length; i += step ){
-            if (persons[i] != null){
-                result[i] = persons[i];
-            }else {
-                result[i] = persons[persons.length -1];
+        if (step == 1){
+            result[0] = persons[0];
+        }else if (result[]){
+            for (int i = 0; i < persons.length; i += step){
+                result[0] = persons[0];
             }
         }
-
-       return result;
-
+        return result;
     }
 }
 
