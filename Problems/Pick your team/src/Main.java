@@ -36,11 +36,10 @@ class TakePersonsWithStepAlgorithm implements PersonSelectionAlgorithm {
             for (int i = 0; i < result.length; i++){
                 result[i] = persons[i];
             }
-            return result;
 
         }else{
-            for (int i = 0; i < result.length; i += step){
-                result[i] = persons[i];
+            for (int i = 0; i < result.length; i++){
+                    result[i] = persons[i];
             }
         }
         return result;
