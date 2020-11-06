@@ -31,18 +31,16 @@ class TakePersonsWithStepAlgorithm implements PersonSelectionAlgorithm {
     @Override
     public Person[] select(Person[] persons) {
         // write your code here
-        Person[] result = new Person[persons.length == 1 ? 1 : (persons.length - 1) / step + 1];
-        if (step == 1){
-            for (int i = 0; i < result.length; i++){
-                result[i] = persons[i];
-            }
+        Person[] team = new Person[(persons.length - 1) / this.step + 1];
+        int index = 0;
 
-        }else{
-            for (int i = 0; i < result.length; i+=step){
-                    result[i] = persons[i];
+        for (int i = 0; i < persons.length; i++){
+            if (i % step == 0){
+                team[index] = persons[i];
+                index++;
             }
         }
-        return result;
+        return team;
     }
 }
 
@@ -52,8 +50,7 @@ class TakeLastPersonsAlgorithm implements PersonSelectionAlgorithm {
     private int count;
 
     public TakeLastPersonsAlgorithm(int count) {
-        // write your code here
-        this.count = count;
+        // write your code here        this.count = count;
     }
 
     @Override
