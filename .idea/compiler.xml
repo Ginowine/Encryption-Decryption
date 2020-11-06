@@ -82,6 +82,8 @@
       <module name="Problems-String_to_double_conversion_test" target="11" />
       <module name="Problems-The_index_of_an_argument_main" target="11" />
       <module name="Problems-The_index_of_an_argument_test" target="11" />
+      <module name="Problems-The_sign_of_a_number_main" target="11" />
+      <module name="Problems-The_sign_of_a_number_test" target="11" />
       <module name="Problems-Time_main" target="11" />
       <module name="Problems-Time_test" target="11" />
       <module name="Problems-Users_and_WebSites_main" target="11" />
