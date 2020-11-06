@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 class SelectionContext {
@@ -31,16 +30,16 @@ class TakePersonsWithStepAlgorithm implements PersonSelectionAlgorithm {
     @Override
     public Person[] select(Person[] persons) {
         // write your code here
-        Person[] team = new Person[(persons.length - 1) / this.step + 1];
+        Person[] result = new Person[(persons.length - 1) / this.step + 1];
         int index = 0;
 
         for (int i = 0; i < persons.length; i++){
             if (i % step == 0){
-                team[index] = persons[i];
+                result[index] = persons[i];
                 index++;
             }
         }
-        return team;
+        return result;
     }
 }
 
@@ -50,14 +49,23 @@ class TakeLastPersonsAlgorithm implements PersonSelectionAlgorithm {
     private int count;
 
     public TakeLastPersonsAlgorithm(int count) {
-        // write your code here        this.count = count;
+        // write your code here
+        this.count = count;
     }
 
     @Override
     public Person[] select(Person[] persons) {
-        // write your code here
-        Person[] result = Arrays.copyOfRange(persons, persons.length - count, persons.length);
-        return result;
+        Person[] team = new Person[count];
+        int index = 0;
+
+        for (int i = 0; i < persons.length; i++) {
+            if (i > persons.length - (1 + count)) {
+                team[index] = persons[i];
+                index++;
+            }
+        }
+
+        return team;
     }
 }
 
