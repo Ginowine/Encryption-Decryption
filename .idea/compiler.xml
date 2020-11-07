@@ -82,6 +82,8 @@
       <module name="Problems-Sorting_arrays_test" target="11" />
       <module name="Problems-String_to_double_conversion_main" target="11" />
       <module name="Problems-String_to_double_conversion_test" target="11" />
+      <module name="Problems-Sum_of_numbers_in_the_range_main" target="11" />
+      <module name="Problems-Sum_of_numbers_in_the_range_test" target="11" />
       <module name="Problems-The_index_of_an_argument_main" target="11" />
       <module name="Problems-The_index_of_an_argument_test" target="11" />
       <module name="Problems-The_sign_of_a_number_main" target="11" />
