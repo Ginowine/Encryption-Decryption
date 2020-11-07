@@ -40,6 +40,8 @@
       <module name="Problems-Employees_test" target="11" />
       <module name="Problems-Find_mistake_main" target="11" />
       <module name="Problems-Find_mistake_test" target="11" />
+      <module name="Problems-Find_the_max_of_three_numbers_main" target="11" />
+      <module name="Problems-Find_the_max_of_three_numbers_test" target="11" />
       <module name="Problems-Fix_compile-time_errors_main" target="11" />
       <module name="Problems-Fix_compile-time_errors_test" target="11" />
       <module name="Problems-Fix_the_non-compiled_hierarchy_main" target="11" />
