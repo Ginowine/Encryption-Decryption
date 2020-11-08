@@ -34,6 +34,8 @@
       <module name="Problems-Create_a_full_name_test" target="11" />
       <module name="Problems-Creating_instances_main" target="11" />
       <module name="Problems-Creating_instances_test" target="11" />
+      <module name="Problems-Decompose_a_math_function_main" target="11" />
+      <module name="Problems-Decompose_a_math_function_test" target="11" />
       <module name="Problems-Double_characters_main" target="11" />
       <module name="Problems-Double_characters_test" target="11" />
       <module name="Problems-Employee_main" target="11" />
