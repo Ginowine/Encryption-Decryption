@@ -23,5 +23,8 @@ class Name {
     }
 
     //implement your method here
-    public static String ...
+    public static String createFullName(String firstName, String lastName){
+        String fullName;
+        return fullName = firstName + " " + lastName;
+    }
 }
