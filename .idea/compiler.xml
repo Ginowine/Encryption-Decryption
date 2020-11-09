@@ -22,6 +22,8 @@
       <module name="Problems-Binary_search_test" target="11" />
       <module name="Problems-Book_main" target="11" />
       <module name="Problems-Book_test" target="11" />
+      <module name="Problems-Calculator_with_four_methods_main" target="11" />
+      <module name="Problems-Calculator_with_four_methods_test" target="11" />
       <module name="Problems-Catching_some_exceptions_main" target="11" />
       <module name="Problems-Catching_some_exceptions_test" target="11" />
       <module name="Problems-Classes_for_Hospital_main" target="11" />
