@@ -14,6 +14,14 @@ class ClockFactory {
      */
     public Clock produce(String type) {
         // write your code here
+        if (type.equals("SAND")){
+            return new SandClock();
+        }else if (type.equals("DIGITAL")){
+            return new DigitalClock();
+        }else if (type.equals("MECH")){
+            return new MechanicalClock();
+        }
+        return new ToyClock();
     }
 }
 
