@@ -28,6 +28,8 @@
       <module name="Problems-Catching_some_exceptions_test" target="11" />
       <module name="Problems-Classes_for_Hospital_main" target="11" />
       <module name="Problems-Classes_for_Hospital_test" target="11" />
+      <module name="Problems-Clock_factory_main" target="11" />
+      <module name="Problems-Clock_factory_test" target="11" />
       <module name="Problems-Compression_algorithm_main" target="11" />
       <module name="Problems-Compression_algorithm_test" target="11" />
       <module name="Problems-Converting_and_multiplying_main" target="11" />
