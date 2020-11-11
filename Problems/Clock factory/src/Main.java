@@ -14,16 +14,21 @@ class ClockFactory {
      */
     public Clock produce(String type) {
         // write your code here
-        if (type.equals("SAND")){
-            return new SandClock();
-        }else if (type.equals("DIGITAL")){
-            return new DigitalClock();
-        }else if (type.equals("MECH")){
-            return new MechanicalClock();
-        }else if (produceToyClock){
-            return new ToyClock();
-        }else {
-            return null;
+        String actualType = type.toUpperCase();
+
+        switch (actualType) {
+            case "SAND":
+                return new SandClock();
+            case "DIGITAL":
+                return new DigitalClock();
+            case "MECH":
+                return new MechanicalClock();
+            default:
+                if (this.produceToyClock) {
+                    return new ToyClock();
+                } else {
+                    return null;
+                }
         }
     }
 }
