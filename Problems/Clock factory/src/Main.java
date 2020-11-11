@@ -20,8 +20,11 @@ class ClockFactory {
             return new DigitalClock();
         }else if (type.equals("MECH")){
             return new MechanicalClock();
+        }else if (produceToyClock == true){
+            return new ToyClock();
+        }else {
+            return null;
         }
-        return new ToyClock();
     }
 }
 
