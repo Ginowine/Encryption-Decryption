@@ -8,16 +8,19 @@ class MotorStaticFactory {
      */
     public static Motor make(char type, String model, long power) {
         // write your code here
-        if (type == Character.toLowerCase('p') || type == Character.toUpperCase('P')){
-            return new PneumaticMotor(model, power);
-        }else if (type == Character.toLowerCase('h') || type == Character.toUpperCase('H')){
-            return new HydraulicMotor(model, power);
-        }else if (type == Character.toLowerCase('e') || type == Character.toUpperCase('E')){
-            return new ElectricMotor(model, power);
-        }else if (type == Character.toLowerCase('w') || type == Character.toUpperCase('W')){
-            return new WarpDrive(model, power);
-        }else {
-            return null;
+        char actualType = Character.toUpperCase(type);
+
+        switch (actualType) {
+            case 'P':
+                return new PneumaticMotor(model, power);
+            case 'H':
+                return new HydraulicMotor(model, power);
+            case 'E':
+                return new ElectricMotor(model, power);
+            case 'W':
+                return new WarpDrive(model, power);
+            default:
+                return null;
         }
 
     }
