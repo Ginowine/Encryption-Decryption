@@ -37,6 +37,13 @@ class ClockFactory {
     /* It produces concrete clocks corresponding their types : Digital, Sand or Mechanical */
     public Clock produce(String type) {
         // write your code here ...
+        if (type.equals("Sand")){
+            return new SandClock();
+        }else if (type.equals("Digital")){
+            return new DigitalClock();
+        }else{
+            return new MechanicalClock();
+        }
     }
 }
 
