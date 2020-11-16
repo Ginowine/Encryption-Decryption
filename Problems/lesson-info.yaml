@@ -51,3 +51,5 @@ content:
 - Static factory methods for Time
 - Clocks
 - Robot
+- Motors
+- Template Method
