@@ -30,6 +30,8 @@
       <module name="Problems-Classes_for_Hospital_test" target="11" />
       <module name="Problems-Clock_factory_main" target="11" />
       <module name="Problems-Clock_factory_test" target="11" />
+      <module name="Problems-Clocks_main" target="11" />
+      <module name="Problems-Clocks_test" target="11" />
       <module name="Problems-Compression_algorithm_main" target="11" />
       <module name="Problems-Compression_algorithm_test" target="11" />
       <module name="Problems-Converting_and_multiplying_main" target="11" />
@@ -82,6 +84,8 @@
       <module name="Problems-Publication_and_its_subclasses_test" target="11" />
       <module name="Problems-Publications_main" target="11" />
       <module name="Problems-Publications_test" target="11" />
+      <module name="Problems-Robot_main" target="11" />
+      <module name="Problems-Robot_test" target="11" />
       <module name="Problems-Saying_animals_main" target="11" />
       <module name="Problems-Saying_animals_test" target="11" />
       <module name="Problems-Shape_hierarchy_main" target="11" />
