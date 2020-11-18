@@ -5,11 +5,9 @@ class ConcatenateStringsProblem {
     public static String concatenateStringsWithoutDigits(String[] strings) {
         // write your code with StringBuilder here
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < strings.length; i++){
-             String str = strings[i].replaceAll("\\d", "");
-             stringBuilder.append(str);
+        for (String string : strings) {
+            stringBuilder.append(string.replaceAll("\\d", ""));
         }
-
         return stringBuilder.toString();
     }
 
